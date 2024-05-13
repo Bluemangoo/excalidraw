@@ -19,7 +19,7 @@ COPY --from=build /opt/node_app/excalidraw-app/build /usr/share/nginx/html
 HEALTHCHECK CMD wget -q -O /dev/null http://localhost || exit 1
 
 ENV \
-    PORT=5000 \
+    PORT=80 \
     HOST=0.0.0.0
 
-EXPOSE 5000
+EXPOSE 80
